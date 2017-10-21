@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "I have a blog now too"
+title:  "The Art of Approximation"
 categories: blog 
-tags: datavisualization maps london
+tags: datavisualisation maps london
 ---
 
 
@@ -10,7 +10,7 @@ tags: datavisualization maps london
 ![anderes](http://melanieimfeld.github.io/assets/Mateo_2.png?style=centerme)
 
 
-<iframe width="560" height="315" src="http://melanieimfeld.github.io/assets/short_movie" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/PWf4WUoMXwg" frameborder="0"> </iframe>
 
 
 
