@@ -8,7 +8,13 @@
             {% endif %}
             <a href="{{ domain }}{{ social_item.url }}" rel="me" {% if social_item.url contains 'http' %} target="_blank" {% endif %} class="social-icons" title="{{ social_item.title }}"><i class="{{ social_item.class }} fa-2x"></a>
             {% endfor %}          
-           
+            </div>
+            <div class="cell">
+            <h6 class="text-footer"><a rel="license" href="{{ site.url }}/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure" class="social-icon"><i class="fa fa-creative-commons"></i></a>
+             <a rel="license" href="{{ site.url }}/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure">2017-{{ site.time | date: '%Y' }}</a>: 
+              <a href="{{ site.url }}" title="Home">melanieimfeld.github.io</a> | 
+              <a href="{{ site.url }}/about/" rel="me">About</a></h6>
+</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous">
 </script>

@@ -70,7 +70,7 @@ h6 {
 }
 
 .fieldset {
-  border: var(--color-font);
+  border: var(--color-grey1);
 }
 
 body {
@@ -80,9 +80,8 @@ body {
   font-family: sans-serif;
 }
 
-/* this is the font top left nav bar */
 a {
-  color: var(--color-font);
+  color: var(--color-grey2);
 }
 
 a:hover,
@@ -99,7 +98,7 @@ ul {
 }
 
 blockquote {
-  border-left: 1px solid var(--color-font);
+  border-left: 1px solid var(--color-grey1);
 }
 
 blockquote,
@@ -113,28 +112,27 @@ cite {
 
 abbr,
 abbr[title] {
-  border-bottom: 1px dotted var(--color-powder);
+  border-bottom: 1px dotted var(--color-font);
 }
 
 code {
   border: 1px solid var(--color-grey1);
-  background-color: var(--color-powder);
-  color: var(--color-powder);
+  background-color: var(--color-light-grey);
+  color: var(--color-font);
 }
 
 kbd {
-  background-color: var(--color-powder);
-  color: var(--color-powder);
+  background-color: var(--color-light-grey);
+  color: var(--color-font);
 }
 
-/* this is the second title top */
 .subheader {
   color: var(--color-font);
 }
 
 .thumbnail {
   border: solid 4px var(--color-powder);
-  box-shadow: 0 0 0 1px var(--color-powder);
+  box-shadow: 0 0 0 1px var(--color-grey1);
 }
 
 a.thumbnail:hover,

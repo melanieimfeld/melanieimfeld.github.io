@@ -119,7 +119,7 @@
 
 .menu-icon:hover::after {
   background: var(--color-grey1);
-  box-shadow: 0 7px 0 var(--color-grey1), 0 14px 0 var(--color-grey1);
+  box-shadow: 0 7px 0 var(--color-grey1), 0 14px 0 var(--color-font);
 }
 
 .menu-icon.dark::after {
