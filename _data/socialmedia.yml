@@ -14,7 +14,7 @@
   title: Code repository
 
 - name: Contact
-  url: <a href="mailto:melanie@imfeld.info" /a>
+  url: mailto:melanie@imfeld.info
   class: fa fa-envelope-square
   title: "Reach me"
 
