@@ -5,11 +5,8 @@ categories: blog
 tags: datavisualization processing 3D london winter
 ---
 
-<style  width:100%;
-   max-width:500px;
-   height:auto; </style>
 
-<video controls="controls" width="800" height="600" 
+<video controls="controls" width="100%" height=auto 
        name="virtual forest" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/forest.mp4"></video>
 
       
