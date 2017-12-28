@@ -6,7 +6,7 @@ tags: datavisualization processing 3D london winter
 ---
 
 
-<video controls="controls" width="100%" height="auto" 
+<video controls="controls" width="70%" height="auto" 
        name="virtual forest" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/forest.mp4"></video>
 
       
