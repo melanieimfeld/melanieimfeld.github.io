@@ -20,20 +20,11 @@ Another cool model is Hotelling's Law (1929), named after economist Harold Hotel
 Both models can be found in the built-in library of Netlogo, a programming environment for agent-based modelling. Netlogo might not exactly look like the newest fad. Indeed, it was developed in the 90ies by a guy named Uri Wilensky at Northwestern University. We all know that that's a very long time, particuarly if measured in computer time...The user interface definitely is a remnant of another area. However, it is fairly easy to understand and it includes an extensive and well-documented library.
 The example I included is a very simple code programmed after an example called Mushroom hunt from the book 'Agent-Based and Individual-Based Modeling: A Practical Introduction' by S.F Railsback and V. Grimm . The goal is to maximize the number of found mushrooms:
 
-* *If a turtle (that's what the arrows are called in Netlogo language) has found a mushroom (red patches) within the last searched 20 patches, let turtle turn at a random angle between -90 and 90. If the turtle is in a cluster of mushrooms it is likelier to find more of them.*  
+1. *If a turtle (that's what the arrows are called in Netlogo language) has found a mushroom (red patches) within the last searched 20 patches, let turtle turn at a random angle between -90 and 90. If the turtle is in a cluster of mushrooms it is likelier to find more of them.*  
 
 
-```
-ifelse time-since-last-found <= 20
-[right(random 181)-90]
-```  
+2. *If a turtle has not found a mushroom within the last searched 20 patches, let turtle turn right at a random angle between 20-10 degrees. The turtle increases the search radius.*    
 
-* *If a turtle has not found a mushroom within the last searched 20 patches, let turtle turn right at a random angle between 20-10 degrees. The turtle increases the search radius.*    
-
-
-```
-[right(random 21)-10]
-```  
 
 ### References
 Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
