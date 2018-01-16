@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The fascinating Science behind Simulations"
+title:  "The fascinating Science behind Urban Models"
 categories: blog 
 tags: datavisualization netlogo london agent-based-modelling simulation
 ---
@@ -22,18 +22,16 @@ The example I included it a very simple code programmed after an example called 
 
 1. If a turtle (that's what the arrows are called in Netlogo language) has found a mushroom (red patches) within the last searched 20 patches, let turtle turn at a random angle between -90 and 90. If the turtle is in a cluster of mushrooms it is likelier to find more of them.
 
-```
-ifelse time-since-last-found <= 20
-[right(random 181)-90]
-
-```
+				```
+				ifelse time-since-last-found <= 20
+				[right(random 181)-90]
+				```
 
 2. If a turtle has not found a mushroom within the last searched 20 patches, let turtle turn right at a random angle between 20-10 degrees. The turtle increases the search radius.
 
-```
-[right(random 21)-10]
-```
-
+				```
+				[right(random 21)-10]
+				```
 
 ## References
 Wilensky, U. (1999). NetLogo. http://ccl.northwestern.edu/netlogo/. Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
