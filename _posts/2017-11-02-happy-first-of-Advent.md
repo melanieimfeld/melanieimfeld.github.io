@@ -11,4 +11,5 @@ tags: datavisualization processing 3D london winter
 
       
 
-Happy first of Advent! This is my first attempt in making something in Processing 3d. The most difficult part is definitively getting your head around the coordinate system. Unlike the modelling software Rhino 3D which I used to work with a lot, the z-axis in Processing by default points at you. Also, in Rhino 3D it takes you roughly 30 seconds to draw a pyramid. In processing 3D, it took me an hour plus some refreshing of my trigonometry knowledge...
+Happy first of Advent! This is my first attempt in making something in Processing 3d. The most difficult part is definitively getting your head around the coordinate system. Unlike the modelling software Rhino 3D which I used to work with a lot, the z-axis in Processing by default points at you. Also, in Rhino 3D it takes you roughly 30 seconds to draw a pyramid. In processing 3D, it took me an hour plus some refreshing of my trigonometry knowledge.
+I vital part of making at multiplying stuff in Processing is the array. Not an easy concept when you get into programming but once you understood it is hard to imagine coding without the array!
