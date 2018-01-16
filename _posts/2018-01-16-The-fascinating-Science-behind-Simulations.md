@@ -6,7 +6,7 @@ tags: datavisualization netlogo london agent-based-modelling simulation
 ---
 
 
-<video controls="controls" width="70%" height="auto" 
+<video controls="controls" width="60%" height="auto" 
        name="virtual forest" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/netlogo_mushroomhunt.mp4"></video>
 
 We started looking at agent-based models in class this week. It seems like the concept of modelling natural and social phenomena is as relevant today as it has been since its boom in the 1970ies. It is probably not a concidence that this idea came up in an era that the famous architecture critic Reyner Banham titled as the 'second machine age'. Architects like Hermann Herzberger, Christopher Alexander and the Japanese Metabolists were heavily influenced by mathematics and behavioural sciences - but that's just an architectural side note. I have browsed a bit through the interwebs and I found two models that are particularly interesting from the perspective on an Urban Planner:
