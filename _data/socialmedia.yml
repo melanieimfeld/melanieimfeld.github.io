@@ -8,17 +8,17 @@
  # class: fa fa-google-plus-square
  # title: "Follow me +foo"
 
-- name: GitHub
-  url: https://github.com/melanieimfeld
-  class: fa fa-github-square
-  title: Code repository
+#- name: GitHub
+ # url: https://github.com/melanieimfeld
+  #class: fa fa-github-square
+  #title: Code repository
 
-- name: Contact
-  url: mailto:melanie@imfeld.info
-  class: fa fa-envelope-square
-  title: "Reach me"
+#- name: Contact
+ # url: mailto:melanie@imfeld.info
+ # class: fa fa-envelope-square
+ # title: "Reach me"
 
-- name: RSS
-  url: "/feed.xml"
-  class: fa fa-rss-square
-  title: "Subscribe to RSS"
+#- name: RSS
+ # url: "/feed.xml"
+ # class: fa fa-rss-square
+ # title: "Subscribe to RSS"
