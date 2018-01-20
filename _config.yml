@@ -17,7 +17,7 @@
 title: Data Doodles
 email: melanie@imfeld.info
 description: > # this means to ignore newlines until "baseurl:"
-  A blog about cities and the people in it.
+  A blog for small projects
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://melanieimfeld.github.io
 twitter_username: jekyllrb
