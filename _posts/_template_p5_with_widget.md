@@ -9,8 +9,6 @@ tags: datavisualization processing 3D london music
 <pre>
 <script type="text/p5">
 
-new p5();
-
 function setup() {                          
   createCanvas(windowWidth, windowHeight);
    background(13,30,46);   

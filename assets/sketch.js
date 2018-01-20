@@ -1,4 +1,4 @@
-new p5();
+//new p5();
 
 function setup() {                          
   createCanvas(windowWidth, windowHeight);
@@ -13,15 +13,16 @@ function setup() {
 }
 
 function draw() {      
- var rad =random(1,15); 
-  var jit = pow(frameCount%3,3);               
+ var rad =random(1,14); 
+ var alpha = random(70,255)
+  //var jit = pow(frameCount%3,3);               
 
     //console.log(jit);
 
 if (mouseIsPressed) {
-   fill(255);
+   fill(255, alpha);
    noStroke();
-  ellipse(mouseX, mouseY, rad +jit, rad+ jit);
+  ellipse(mouseX, mouseY, rad, rad);
 
 
 }
