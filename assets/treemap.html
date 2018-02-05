@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+    </style>
+   <link rel="stylesheet" type="text/css" href="trees.css"/>
+  </head>
+  <body>
+
+<!-- this is the map div -->
+  <div id='map'></div>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaW1mZWxkIiwiYSI6ImNqMzR2aTE0dDAwaGYyd3Fncmc1ODRkemcifQ.HTl7csPq_0VP3yO28G2u8Q';
+  var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/imfeld/cjda9bjzeamzy2rn24gvo9c0h', // stylesheet location
+    center: [8.54187012, 47.38], // starting position [lng, lat]
+    zoom: 13 // starting zoom
+  });
+
+  map.on('load', function() {
+    map.addLayer({
+      id: 'tree-species',
+      type: 'circle',
+      source: {
+        type: 'vector',
+        url: 'mapbox://imfeld.8qrdagbc'
+      },
+      'source-layer': 'trees-cleaned-wgs-avgvl2',
+      /*paint: {
+ //calculate the age 2017 - colum 'Constructi' transformed into a number, 'get' gets the column. wrap a divior of 10 around
+
+ //interpolate / zoom / linear to define stops for zoom 10 and 13
+        'circle-radius': [ 
+        'interpolate', ['linear'], ['zoom'],
+        10, ['/',['-', 2018, ['number', ['get', 'pflanzjahr'], 2018]],30],
+        13, ['/',['-', 2018, ['number', ['get', 'pflanzjahr'], 2018]],10]
+        ],
+
+        'circle-opacity':0.8,
+        'circle-color': 'rgb(171, 72, 33)'
+
+      }*/
+
+        'paint': {
+            // make circles larger as the user zooms from z12 to z22
+            'circle-radius': {
+                'base': 5, //13
+                'stops': [[11, 4], [18, 30],[22, 100]]
+            },
+            // color circles by ethnicity, using a match expression
+            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+            'circle-color': [
+                'match',
+                ['get', 'baumnamedeu'],
+                'Gewöhnlicher Kiefer, Wald-Kiefer, Föhre','#FF2D00',
+                'Robinie, Schein-Akazie', '#78c679',
+                'Eibe, Gewöhnliche Eibe','#FF8D00',
+                'Gemeine Esche', '#f7fcb9',
+                'Gemeine Rosskastanie', '#e0f3db',
+                'Sand-Birke, Weiss-Birke', '#a8ddb5',
+                'Platane (occidentalis x orientalis)', '#7bccc4',
+                'Gemeine Hain- oder Weissbuche', '#08589e',
+                'Apfel-Obstgehölz', '#005a32',
+                'Spitz-Ahorn', '#238443',
+                /* other */ '#7fcdbb' 
+            ],
+            'circle-opacity':0.5
+        }
+
+
+    });
+
+
+ //create arrays to store values
+     var layers = ['Kiefer, Föhre','Robinie, Schein-Akazie', 'Eibe, Gewöhnliche Eibe', 'Gemeine Esche','Rosskastanie', 'Sand-Birke, Weiss-Birke', 'Platane', 'Hain- oder Weissbuche', 'Apfel-Obstgehölz', 'Ahorn','andere'];
+	var colors = ['#FF2D00', '#78c679', '#FF8D00', '#f7fcb9', '#e0f3db', '#a8ddb5', '#7bccc4', '#08589e', '#005a32','#238443','#7fcdbb'];   
+
+
+//create legend
+	for (i = 0; i < layers.length; i++) {
+  var layer = layers[i];
+  var color = colors[i];
+  var item = document.createElement('div');
+  var key = document.createElement('span');
+  key.className = 'legend-key';
+  key.style.backgroundColor = color;
+
+  var value = document.createElement('span');
+  value.innerHTML = layer;
+  item.appendChild(key);
+  item.appendChild(value);
+  legend.appendChild(item);
+
+}
+
+  });
+
+  </script>
+  <!-- this is the legend div, needs to be located under mapdiv -->
+  <div class='map-overlay' id='legend'>
+  	<h4> Baumsorten in der Stadt Zürich </h4>
+  </div>
+
+  </body>
+</html>
+
+
