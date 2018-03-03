@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>migration map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%;}
+
+    .map-legends{
+      /*  background: rgba(80,80,0,0.1);*/
+      background:none;
+      color:white;
+      font: 300% 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+      position:'topright';
+    }
+
+    .leaflet-popup-content-wrapper {
+      /*background: rgba(80,80,0,0.1);*/
+      background: rgba(0,25,45,0.8);
+      color:white;
+      font: 150% 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+    }
+
+    .leaflet-popup-close-button:hover {
+      background-color:#f8f8f8
+    }
+
+   .legend-subtitle {
+      font-size: 90%;
+    }
+
+  /*little arrow at the end of popup*/
+    .leaflet-popup-tip {
+      border-top:10px solid rgba(0,25,45,0.8);
+    }
+
+    #floating-panel {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      z-index: 99;
+      background-color:none;
+      padding: 50px;
+      text-align: left;
+      font: 100% 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+      color:white;
+      line-height: 20px;
+      padding-left: 15px;
+}
+
+</style>
+}
+</head>
+<body>
+
+  <script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <!-- This is the data -->
+  <script src='js/coords.js'></script>
+  <script src='js/flows.js'></script>
+  <script src='js/totals.js'></script>
+
+
+  <div id='legend' style='display:none;'>
+    <div class='legend-title'>UN MIGRATION <br> MAP 2017</div>
+    <div class='legend-subtitle'>click on a <div style="color:yellow;"> yellow </div> circle to see the total inflows &#9658; </div>
+  </div>
+
+  <!-- Top three -->
+  <div id="floating-panel">
+  </div>
+
+  <div id='map' class='dark'></div>
+
+  <script>
+
+// great tutorial: https://maptimeboston.github.io/leaflet-intro/ also check leaflet omnivore
+L.mapbox.accessToken = 'pk.eyJ1IjoiaW1mZWxkIiwiYSI6ImNqMzR2aTE0dDAwaGYyd3Fncmc1ODRkemcifQ.HTl7csPq_0VP3yO28G2u8Q';
+
+// Show the whole world in this first view. smaller number: more zoomed out
+map = L.mapbox.map('map', 'mapbox.satellite', { minZoom: 2, maxZoom: 10,
+  legendControl: {
+// Any of the valid control positions:
+// https://www.mapbox.com/mapbox.js/api/v3.1.1/l-control/#control-positions
+position: 'topleft'
+}
+})
+.setView([20, 0], 2);
+
+//add credits
+var credits = L.control.attribution({
+  prefix: '<a href="https://esa.un.org/unmigration/">UN migration data</a>'
+}).addTo(map);
+
+// data into the {x, y} expected by arc.js. transform array into correct format
+function obj(ll) { return { y: ll[0], x: ll[1] }; }
+
+var test = {x: pairs[0][0], y: pairs[0][1]}
+
+//loop though all coordinate-pairs
+for (var i = 0; i < pairs.length; i++) {
+
+//create the arc-line with arc.js
+var generator = new arc.GreatCircle(
+  obj(pairs[i][0]),
+  obj(pairs[i][1]));
+var line = generator.Arc(100, { offset: 10 });
+
+//add attributes to polyline
+
+var polyline_options = {
+  color: '#ffffff',
+  weight: 0.2,
+  opacity: 1
+};
+
+// Leaflet expects [lat,lng] arrays, switch here. add polyline to map
+var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+  return c.reverse();
+}), polyline_options)
+.addTo(map);
+
+
+//pepare marker content
+var x = 0;
+
+for (var j=0; j<totals.length; j++){
+  if (pairs[i][2][0] == totals[j][0]) {
+    x = " : " + totals[j][1]; 
+  } 
+}
+
+// this is a countryname - coords pair: pairs[i][0],pairs[i][2][0];
+//make a marker with a circle: CSS: .leaflet-default-icon-path
+var marker = L.circle(pairs[i][0], {radius:0.5, color: 'yellow'})
+.bindPopup(pairs[i][2][0] + x)
+.addTo(map);
+
+
+//add legend
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+
+//display top three
+var max1 = " 49'776'970";
+var max2 = " 12'185'284";
+var max3 = " 12'165'083";
+
+document.getElementById("floating-panel").innerHTML = '<span> United States: <div style="color:yellow;">' + max1 + '</div></span><br/><span> Saudi Arabia:<div style="color:yellow;">' + max2 + '</div> </span><br/> <span> Germany:<div style="color:yellow;">' + max3 + '</div></span><br/>';
+
+}
+
+</script>
+
+
+</body>
+</html>
+
+
