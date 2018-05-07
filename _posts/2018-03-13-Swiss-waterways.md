@@ -6,9 +6,10 @@ tags: datavisualization processing 3D london data
 ---
 
 
-<img style="float: center;" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/rivers.jpg">
+<img style="float: center;" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/map_water.png">
 
-I found this stunningly beautiful map of all Swiss rivers. The map can be obtained at the Bundesamt für Umwelt Switzerland. I'm hoping to use it for a project on the relation between people and water. Stay tuned!
+I recently found this stunningly beautiful map of all Swiss rivers. The data can be obtained from the Bundesamt für Umwelt Switzerland (BAFU). I created this webmap with the data using Mapbox and Leaflet. It will be available to play around with online soon!
+
 
 
 
