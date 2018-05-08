@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can we predict Function based on Form?"
+title:  "Can we use Machine Learning to predict building functions?"
 categories: blog 
 tags: datavisualization processing 3D london data machinelearning
 ---
