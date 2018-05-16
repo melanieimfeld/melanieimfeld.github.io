@@ -83,6 +83,8 @@ select all canton polygons that each consolidated Strahler group intersects with
 each selection, the mean of the percentage of land that is covered by human
 settlements is calculated.
 
+<img style="float: center;" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/map_water2.png">
+
 <b>Results, limitations and further development</b> <br>
 The interactive web map was tested on Chrome, Firefox and Safari and renders
 without errors in all three browsers. The web map is currently not responsive and
