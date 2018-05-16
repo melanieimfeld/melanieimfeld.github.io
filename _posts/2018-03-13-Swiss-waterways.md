@@ -14,7 +14,7 @@ web map. To define stream size based on network hierarchy, the Strahler number i
 used as a numerical measure of a stream's branching complexity. The more streams
 branch into a stream, the higher its Strahler order.
 
-<b> Data </b></br>
+<b> Data </b> <br>
 The dataset of the Swiss waterways can be obtained from the Federal Department of
 Environment (BAFU) as a Shapefile. The lakes of Switzerland were retrieved from a
 separate dataset also created and maintained by BAFU and added to the map for
@@ -22,7 +22,7 @@ orientation purposes. In order to quantify settlement density adjacent to each S
 group from 3 to 9, a Shapefile containing census data aggregated per Canton (state)
 was retrieved from the Federal Department of Statistics.
 
-<b>Methods</b></br>
+<b>Methods</b> <br>
 Prior to the transformation of the Shapefile into an SQL format, the waterways data is
 simplified and dissolved in QGIS. The roughly 250’000 different stream segments are
 consolidated into the nine hierarchical Strahler orders they belong to in order to
@@ -83,7 +83,7 @@ select all canton polygons that each consolidated Strahler group intersects with
 each selection, the mean of the percentage of land that is covered by human
 settlements is calculated.
 
-<b>Results, limitations and further development</b> </br>
+<b>Results, limitations and further development</b> <br>
 The interactive web map was tested on Chrome, Firefox and Safari and renders
 without errors in all three browsers. The web map is currently not responsive and
 therefore only works on computer displays. In a next step, the content could be made
@@ -99,18 +99,18 @@ and complex datasets, such as raster tiles.
 
 
 --------------
-Query a PostGIS table:
+Query a PostGIS table:<br>
 https://gist.github.com/bmcbride/1913855
 
-PostGIS and PostgreSQL:
+PostGIS and PostgreSQL:<br>
 http://www.postgresonline.com/journal/archives/267-Creating-GeoJSON-Feature-Collections-with-JSON-and-PostGIS-functions.html
 
-Federal Department for Environment (BAFU):
+Federal Department for Environment (BAFU):<br>
 https://www.bafu.admin.ch/bafu/de/home/themen/wasser/zustand/karten/einzugsgebietsgliederung-schweiz/nutzung-gewaesserbezogener-umweltdaten.html
-
+<br>
 https://www.bafu.admin.ch/bafu/de/home/themen/wasser/zustand/karten/einzugsgebietsgliederung-schweiz.html
 
-Federal Department of Statistics (BFS):
+Federal Department of Statistics (BFS):<br>
 https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung.html
 
 
