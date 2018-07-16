@@ -10,7 +10,7 @@ tags: datavisualization web leaflet
 
 I am currently working on a web tool that aims to create a database of all vacant land in London through crowdsourcing for my Master's thesis. Want to know more? Read below:
 
-# Why do we need a reliable database for vacant land? <br>
+## Why do we need a reliable database for vacant land? <br>
 According to think tank New Economic Foundation (NEF), groups looking to build community-led, affordable housing development in their area face one great obstacle: acquiring land (Martin, 2018). Many reasons prevent community groups from entering this game. Some of them relate to the lack of transparency when it comes to available ressources:
 
 *1) Inaccessibility of data:* Land ownership data is restricted to public. Access to the LM Land Registry is not free of charge and can only be obtained for individual properties (Shrubsole, 2016).
@@ -25,7 +25,7 @@ Two pieces of information are essential for community groups interested in build
 *2) Gamification in spatial processes:* Krek (2005) observed that many citizens are “rationally ignorant”. According to the rational ignorance condition, citizens tend to ignore urban planning processes because participation would require a high investment of time and effort to ascertain the current planning situation. Poplin (2012), tries to overcome this condition by creating online serious games to bring playfulness and pleasure to the serious processes of urban planning decisions.
 
 
-# Case study background <br>
+## Case study background <br>
 
 **Vacant land in London**<br>
 In the year 2000, the government released a White Paper where councils were encouraged to use previously developed land and buildings are regenerated to maximize the use of existing resources (Davies et al., 2001). Using existing resources is important due to planning policies that restrict development on remaining greenfields and limitations relating to land ownership. However, the redevelopment of previously developed land, also referred to as brownfields, and empty property is greatly constrained by a lack of data (Myers and Wyatt, 2004). The following paragraphs describe the information that is publicly available and its deficits.
