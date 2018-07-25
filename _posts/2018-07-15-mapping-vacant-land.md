@@ -6,7 +6,8 @@ tags: datavisualization web leaflet
 ---
 
 
-<img style="float: center;" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/screenshotGame.png">
+<!-- <img style="float: center;" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/screenshotGame.png"> -->
+<iframe width="420" height="315" src="https://raw.githubusercontent.com/melanieimfeld/melanieimfeld.github.io/master/assets/gameprototype3.mp4" frameborder="0" allowfullscreen></iframe>
 
 I am currently working on a web tool that aims to create a database of all vacant land in London through crowdsourcing for my Master's thesis. Want to know more? Read below:
 
