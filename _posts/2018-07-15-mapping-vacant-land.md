@@ -49,3 +49,8 @@ Concepts of citizen science can also be applied to geography. Many terms refer t
 
 *3) What about validating the output of VGI?*<br>
 While VGI has proliferated in recent years, assessing the quality of volunteer-contributed data has proven challenging. There are many approaches to quality control for volunteer-contributed data (Salk et al., 2016). Allahbakhsh (2013), differentiates between the following eight approaches: Expert review, Output agreement, Input agreement, Ground truth, Majority consensus, Contributor evaluation, real-time support and Workflow management.
+
+
+EDIT:
+Just recently, the online news platform Citylab published an interesting article on the topic of land vacancy, land banking and property guardianship. Read here: https://www.citylab.com/solutions/2018/10/londons-empty-spaces/572011/
+
