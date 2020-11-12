@@ -1,0 +1,38 @@
+html, body {
+	width:  100%;
+	height: 100%;
+	margin: 0;
+	background: black;
+	color: white;
+	font: 1rem 'Fira Sans', sans-serif;
+}
+
+
+div.tooltip {
+	position: absolute;
+	text-align: left;
+	font-size: 11px;
+	background: rgba(25, 25, 25, .7);
+}
+
+#row {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#row > div {
+  /* these are the flex items */
+  flex: 1;
+
+}
+
+#filter {
+	margin-top: 20px;
+	margin-left: 30px;
+	z-index: 1;
+}
+
+input {
+    margin: .4rem;
+}
